@@ -5,17 +5,17 @@ export class Todo {
     this.id = data.id
   }
 
-  get todoListCard() {
+
+
+
+  get todoList() {
     return `
-    
-     <div>
-          <form>
-            <div class="input">
-              <input type="text" title="${this.description}" required max="50">
-            </div>
-          </form>
-        </div>
-    
+   
+       <input type="checkbox" id="vehicle1" name="vehicle1" value="description">
+          <label for="vehicle1">${this.description}</label><br>
+          <div>
+            <span onclick="app.todosController.deleteTodo('${this.id}')" class="mdi mdi-delete-forever"></span>
+          </div>
     `
   }
 }

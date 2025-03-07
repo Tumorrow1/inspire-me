@@ -31,12 +31,26 @@
           <hr>
         </div>
         <div>
-          <form onsubmit="app.TodoController.createTodo()">
+          <form onsubmit="app.todosController.createTodo()">
             <div class="input">
-              <input type="text" title="name" required max="50">
+              <input type="text" title="name" name="description" required max="50">
+              <span><button type="submit">create</button></span>
             </div>
           </form>
         </div>
+        <p>Not done todo <span id="notDoneTodo">0/</span></p>
+        <form id="todoList">
+          <!-- <input type="checkbox" id="vehicle1" name="vehicle1" value="description">
+          <label for="vehicle1"> I have a bike</label><br>
+          <div>
+            <span onclick="app.TodosController.deleteTodo("${this.id}")" class="mdi mdi-delete-forever"></span>
+          </div> -->
+
+        </form>
+
+
+
+        </v>
       </div>
     </div>
 

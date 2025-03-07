@@ -4,10 +4,11 @@ import { createObservableProxy } from './utils/ObservableProxy.js'
 
 class ObservableAppState extends EventEmitter {
 
+
   /**
    * @type {Todo[]}
    */
-  todo = []
+  todos = []
   /**
    * @type {import("./Auth/Identity.js").Identity}
    */
