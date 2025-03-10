@@ -13,6 +13,10 @@ class ObservableAppState extends EventEmitter {
    * @type {import("./Auth/Identity.js").Identity}
    */
   identity = null
+
+
+
+  Imgs = []
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

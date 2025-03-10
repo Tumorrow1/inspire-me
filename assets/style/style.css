@@ -16,3 +16,21 @@ main {
   justify-content: start;
   align-items: end;
 }
+
+.clock {
+  background: darkgray;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.clock-time .clock-ampm {
+  font-family: sans-serif;
+  font-size: 30px;
+  background-color: beige;
+}
+
+.clock-time {
+  font-size: 40px;
+}

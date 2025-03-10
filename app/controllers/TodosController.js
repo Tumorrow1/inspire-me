@@ -11,6 +11,7 @@ export class TodosController {
     AppState.on(`todos`, this.drawTodos)
     AppState.on(`todos`, this.drawNotDoneTodoCount)
 
+
     console.log(`todos man`);
     // this.getTodos()
 
@@ -22,6 +23,7 @@ export class TodosController {
     todos.forEach(todo => content += todo.todoList)
     const todosElm = document.getElementById(`todoList`)
     todosElm.innerHTML = content
+    // document.body.style.backgroundImage = "url(${image})"
   }
 
   async getTodos() {
