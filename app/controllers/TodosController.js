@@ -11,7 +11,6 @@ export class TodosController {
     AppState.on(`todos`, this.drawTodos)
     AppState.on(`todos`, this.drawNotDoneTodoCount)
 
-
     console.log(`todos man`);
     // this.getTodos()
 
@@ -23,7 +22,7 @@ export class TodosController {
     todos.forEach(todo => content += todo.todoList)
     const todosElm = document.getElementById(`todoList`)
     todosElm.innerHTML = content
-    // document.body.style.backgroundImage = "url(${image})"
+    // document.body.style.backgroundImage = "url(${imgs})"
   }
 
   async getTodos() {
@@ -37,6 +36,18 @@ export class TodosController {
 
     }
 
+  }
+
+  async toggleTodo(todoId) {
+    try {
+      console.log(`no toggle`);
+
+      await todosService.updateTodo(todoId)
+    } catch (error) {
+      Pop.error(error, `no toggle`)
+      console.error(`couldnt toggle todo`, error);
+
+    }
   }
 
   async createTodo() {
@@ -82,4 +93,6 @@ export class TodosController {
 
     }
   }
+
+
 }

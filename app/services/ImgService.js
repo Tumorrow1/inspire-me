@@ -7,7 +7,7 @@ class ImgService {
     const response = await api.get(`api/images`)
     console.log(`got images`);
     const img = new Img(response.data)
-    // AppState.Imgs = img
+    AppState.img = img
   }
 }
 
